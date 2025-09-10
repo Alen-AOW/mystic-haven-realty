@@ -32,7 +32,7 @@ export default function DropdownButton({ title }: DropdownButtonProps) {
       <button
         onClick={() => setOpen(!open)}
         type="button"
-        className="w-full h-full flex items-center justify-center gap-x-2 font-normal font-poppins text-xl text-white shadow-sm cursor-pointer"
+        className="flex items-center justify-center gap-x-2 font-normal font-poppins text-xl text-white shadow-sm cursor-pointer"
       >
         {title}
         <svg
@@ -52,7 +52,7 @@ export default function DropdownButton({ title }: DropdownButtonProps) {
       {/* Dropdown Menu */}
       {open && (
         <div
-          className="absolute right-0 top-10 mt-2 min-w-60 bg-white shadow-md rounded-lg divide-y divide-gray-200 z-100"
+          className="absolute right-0 top-10 mt-2 min-w-60 bg-white shadow-md rounded-lg divide-y divide-gray-200 z-30"
           role="menu"
         >
           <div className="p-1 space-y-0.5">
@@ -79,28 +79,6 @@ export default function DropdownButton({ title }: DropdownButtonProps) {
               className="block py-2 px-3 text-sm text-gray-800 rounded-lg hover:bg-gray-100"
             >
               Team Account
-            </a>
-          </div>
-          <div className="p-1 space-y-0.5">
-            <a
-              href="#"
-              className="block py-2 px-3 text-sm text-gray-800 rounded-lg hover:bg-gray-100"
-            >
-              Upgrade License
-            </a>
-          </div>
-          <div className="p-1 space-y-0.5">
-            <a
-              href="#"
-              className="block py-2 px-3 text-sm text-gray-800 rounded-lg hover:bg-gray-100"
-            >
-              Account Settings
-            </a>
-            <a
-              href="#"
-              className="block py-2 px-3 text-sm text-gray-800 rounded-lg hover:bg-gray-100"
-            >
-              Sign out
             </a>
           </div>
         </div>

@@ -75,8 +75,17 @@ export default function SiteHeader() {
       </nav>
       {/* for Mobile */}
       {menuOpen && (
-        <div className="absolute z-10 top-12 bg-[#5E2D4F] h-[500px] w-[500px] ">
-          Menu Content
+        <div className="absolute z-10 top-12 bg-[#5E2D4F] h-[500px] w-[500px] rounded-2xl flex items-center justify-center ">
+          <Link href="/">
+            <Image
+              className=""
+              src="/header/MHR-Logo.svg"
+              alt="MHR Logo"
+              height={80}
+              width={80}
+              priority
+            />
+          </Link>
         </div>
       )}
     </header>
