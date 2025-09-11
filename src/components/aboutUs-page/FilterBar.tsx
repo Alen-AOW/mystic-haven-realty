@@ -10,7 +10,7 @@ export default function FilterBar() {
     "Location",
   ];
   return (
-    <div className="relative h-[178px] w-full my-0 sm:my-10 ">
+    <div className="relative h-[178px] w-full -my-8 sm:my-10 ">
       <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center flex-col">
         <Image
           src="/about/about-hero.svg"

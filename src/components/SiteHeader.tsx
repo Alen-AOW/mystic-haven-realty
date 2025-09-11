@@ -76,7 +76,12 @@ export default function SiteHeader() {
       {/* for Mobile */}
       {menuOpen && (
         <div className="absolute z-10 top-30  right-12 bg-[#5E2D4F] h-auto auto  lg:hidden rounded-2xl flex flex-col items-center justify-center px-5 py-5">
-          <Link href="/">
+          <Link
+            href="/"
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
             <Image
               className=""
               src="/header/MHR-Logo.svg"
@@ -89,22 +94,64 @@ export default function SiteHeader() {
           <div className="flex flex-col gap-3">
             <ul className="font-normal flex flex-col gap-3">
               <li>
-                <Link href="/">Home</Link>
+                <Link
+                  href="/"
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/properties">Properties</Link>
+                <Link
+                  href="/properties"
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
+                >
+                  Properties
+                </Link>
               </li>
               <li>
-                <Link href="/about-us">About Us</Link>
+                <Link
+                  href="/about-us"
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
+                >
+                  About Us
+                </Link>
               </li>
               <li>
-                <Link href="/for-buyers">For Buyers</Link>
+                <Link
+                  href="/for-buyers"
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
+                >
+                  For Buyers
+                </Link>
               </li>
               <li>
-                <Link href="/">Partners</Link>
+                <Link
+                  href="/"
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
+                >
+                  Partners
+                </Link>
               </li>
               <li>
-                <Link href="/">Contact Us</Link>
+                <Link
+                  href="/"
+                  onClick={() => {
+                    setMenuOpen(false);
+                  }}
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
