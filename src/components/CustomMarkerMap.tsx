@@ -14,17 +14,17 @@ const markers: CustomMarker[] = [
   {
     position: [25.2085, 55.2764],
     title: "Damak",
-    imageUrl: "/about/map/damak-building.png",
+    imageUrl: "/about/map/damak-building.svg",
   },
   {
     position: [25.2098, 55.2758],
     title: "Emaar",
-    imageUrl: "/about/map/emaar-building.png",
+    imageUrl: "/about/map/emaar-building.svg",
   },
   {
     position: [25.2098, 55.2776],
     title: "Sobha",
-    imageUrl: "/about/map/sobha-building.png",
+    imageUrl: "/about/map/sobha-building.svg",
   },
 ];
 
@@ -33,7 +33,7 @@ export default function CustomMarkerMap() {
     <div className="h-full w-full">
       <MapContainer
         center={[25.209, 55.277]}
-        zoom={18}
+        zoom={16}
         className="h-full w-full rounded-lg shadow-lg"
       >
         <TileLayer
@@ -52,7 +52,14 @@ export default function CustomMarkerMap() {
 
           return (
             <Marker key={index} position={marker.position} icon={customIcon}>
-              <Popup>{marker.title}</Popup>
+              <Popup className="custom-popup">
+                <div className="p-3 bg-white text-black rounded-lg shadow-lg">
+                  <h3 className="text-lg font-semibold">{marker.title}</h3>
+                  <button className="mt-2 px-3 py-1 bg-black text-white rounded-md">
+                    View Details
+                  </button>
+                </div>
+              </Popup>
             </Marker>
           );
         })}

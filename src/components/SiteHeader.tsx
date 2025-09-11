@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import Hamburger from "./Hamburger";
+import Portal from "./Portal";
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -75,87 +76,89 @@ export default function SiteHeader() {
       </nav>
       {/* for Mobile */}
       {menuOpen && (
-        <div className="absolute z-10 top-30  right-12 bg-[#5E2D4F] h-auto auto  lg:hidden rounded-2xl flex flex-col items-center justify-center px-5 py-5">
-          <Link
-            href="/"
-            onClick={() => {
-              setMenuOpen(false);
-            }}
-          >
-            <Image
-              className=""
-              src="/header/MHR-Logo.svg"
-              alt="MHR Logo"
-              height={50}
-              width={50}
-              priority
-            />
-          </Link>
-          <div className="flex flex-col gap-3">
-            <ul className="font-normal flex flex-col gap-3">
-              <li>
-                <Link
-                  href="/"
-                  onClick={() => {
-                    setMenuOpen(false);
-                  }}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/properties"
-                  onClick={() => {
-                    setMenuOpen(false);
-                  }}
-                >
-                  Properties
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about-us"
-                  onClick={() => {
-                    setMenuOpen(false);
-                  }}
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/for-buyers"
-                  onClick={() => {
-                    setMenuOpen(false);
-                  }}
-                >
-                  For Buyers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  onClick={() => {
-                    setMenuOpen(false);
-                  }}
-                >
-                  Partners
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/"
-                  onClick={() => {
-                    setMenuOpen(false);
-                  }}
-                >
-                  Contact Us
-                </Link>
-              </li>
-            </ul>
+        <Portal>
+          <div className="absolute z-[99999] top-30  right-12 bg-[#5E2D4F] h-auto auto  lg:hidden rounded-2xl flex flex-col items-center justify-center px-5 py-5">
+            <Link
+              href="/"
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            >
+              <Image
+                className=""
+                src="/header/MHR-Logo.svg"
+                alt="MHR Logo"
+                height={50}
+                width={50}
+                priority
+              />
+            </Link>
+            <div className="flex flex-col gap-3">
+              <ul className="font-normal flex flex-col gap-3">
+                <li>
+                  <Link
+                    href="/"
+                    onClick={() => {
+                      setMenuOpen(false);
+                    }}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/properties"
+                    onClick={() => {
+                      setMenuOpen(false);
+                    }}
+                  >
+                    Properties
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about-us"
+                    onClick={() => {
+                      setMenuOpen(false);
+                    }}
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/for-buyers"
+                    onClick={() => {
+                      setMenuOpen(false);
+                    }}
+                  >
+                    For Buyers
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    onClick={() => {
+                      setMenuOpen(false);
+                    }}
+                  >
+                    Partners
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/"
+                    onClick={() => {
+                      setMenuOpen(false);
+                    }}
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </Portal>
       )}
     </header>
   );
