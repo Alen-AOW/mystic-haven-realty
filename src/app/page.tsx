@@ -12,10 +12,12 @@ export default function Home() {
       />
       {/* Title */}
       <div className="absolute inset-0 flex items-center justify-center flex-col">
-        <p className="font-poppins font-medium text-white text-2xl">
+        <p className="font-poppins font-medium text-white text-lg sm:text-2xl">
           Mystic Heaven Reality
         </p>
-        <p className="font-poppins font-medium text-white text-5xl">Home</p>
+        <p className="font-poppins font-medium text-white text-4xl sm:text-5xl">
+          Home
+        </p>
       </div>
     </section>
   );

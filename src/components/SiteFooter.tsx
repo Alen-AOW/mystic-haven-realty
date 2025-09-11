@@ -85,7 +85,7 @@ export default function SiteFooter() {
           </ul>
         </div>
       </div>
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 text-center">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 text-center text-xs sm:text-lg text-nowrap">
         © 2025 Mystic Haven Realty . All Rights Reserved.
       </div>
     </footer>

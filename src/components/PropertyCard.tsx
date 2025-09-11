@@ -3,7 +3,7 @@ import Rating from "./Rating";
 
 export default function PropertyCard() {
   return (
-    <div className="w-[260px] mb-5">
+    <div className="max-w-[260px] mb-5">
       <div className="overflow-hidden rounded-xl my-2">
         <Image
           src="/properties/property-card.png"
@@ -14,7 +14,7 @@ export default function PropertyCard() {
         />
       </div>
       <div>
-        <h3 className="text-[22px] font-semibold font-poppins mb-2">
+        <h3 className="text-sm md:text-[22px] font-semibold font-poppins mb-2">
           Flats In Marasa Dubai
         </h3>
         <p className="text-xs font-light mb-2">

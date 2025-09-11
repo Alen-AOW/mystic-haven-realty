@@ -14,30 +14,32 @@ export default function Buyers() {
   return (
     <section className="min-h-screen flex flex-col font-poppins w-full mb-12">
       {/* Hero Image */}
-      <div className="w-full h-[500px] relative">
+      <div className="relative w-full aspect-[16/9] md:aspect-[21/9] max-h-[500px]">
         <Image
           src="/buyers/emaar-hero.png"
-          alt="Properties Hero"
+          alt="Emaar Hero"
           fill
           priority
-          className="object-cover"
+          className="object-fit md:object-cover"
         />
       </div>
       {/* Title section */}
       <div className=" w-full bg-blue flex flex-col justify-center items-center font-poppins py-6 ">
-        <h2 className="font-poppins items-center font-medium text-4xl uppercase my-4">
+        <h2 className="font-poppins items-center font-medium text-3xl sm:text-4xl uppercase my-4 text-center">
           Welcome to Emaar Properties, Dubai
         </h2>
-        <p className="text-[#FFB27F] font-light font-poppins text-2xl max-w-[1030px] text-center leading-relaxed">
+        <p className="text-[#FFB27F] font-light font-poppins text-sm sm:text-2xl max-w-[1030px] text-center leading-relaxed">
           "Our vision is to transform urban spaces into sustainable, healthy,
           and vibrant developments for a brighter tomorrow."
         </p>
       </div>
       {/* Emaar property pics section */}
-      <section className="min-h-screen font-poppins w-full px-40 mb-14">
+      <section className="min-h-screen font-poppins w-full px-6 md:px-16 lg:px-40 mb-14">
         <div className="flex justify-between items-baseline my-8">
-          <h2 className="text-2xl font-normal">TRENDING EMAAR PROPERTIES</h2>
-          <Link className="text-2xl font-normal " href="/">
+          <h2 className="text-[18px] sm:text-2xl font-normal">
+            TRENDING EMAAR PROPERTIES
+          </h2>
+          <Link className="text-sm sm:text-2xl font-normal " href="/">
             See All
           </Link>
         </div>
@@ -50,7 +52,7 @@ export default function Buyers() {
                   alt="Trending picture"
                   fill
                   priority
-                  className="object-cover transition-transform duration-500 scale-110 group-hover:scale-100"
+                  className="object-cover transition-transform duration-500 scale-100 md:scale-110 group-hover:scale-100"
                 />
               </div>
             </Link>
@@ -58,10 +60,12 @@ export default function Buyers() {
         </div>
       </section>
       {/* Emaar properties for sale section */}
-      <section className="min-h-screen font-poppins w-full px-40 mb-18">
+      <section className="min-h-screen font-poppins w-full px-6 md:px-12 lg:px-40 mb-18">
         <div className="flex justify-between items-baseline my-8">
-          <h2 className="text-2xl font-normal">PROPERTIES FOR SALE</h2>
-          <Link className="text-2xl font-normal" href="/">
+          <h2 className="text-[18px] sm:text-2xl font-normal">
+            PROPERTIES FOR SALE
+          </h2>
+          <Link className="text-sm sm:text-2xl font-normal" href="/">
             See All
           </Link>
         </div>
@@ -73,7 +77,7 @@ export default function Buyers() {
         </div>
       </section>
       {/* map section */}
-      <section className="w-full h-[700px] -mb-12">
+      <section className="w-full h-[350px] md:h-[700px] -mb-12">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509546!2d144.95565131550477!3d-37.81732797975198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5771f63a4e2!2sMelbourne%20CBD!5e0!3m2!1sen!2sau!4v1677052351210!5m2!1sen!2sau"
           width="100%"

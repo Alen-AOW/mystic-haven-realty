@@ -32,7 +32,7 @@ export default function DropdownButton({ title }: DropdownButtonProps) {
       <button
         onClick={() => setOpen(!open)}
         type="button"
-        className="flex items-center justify-center gap-x-2 font-normal font-poppins text-xl text-white shadow-sm cursor-pointer"
+        className="flex items-center justify-center gap-x-2 font-normal font-poppins text-[10px] sm:text-xl text-white shadow-sm cursor-pointer"
       >
         {title}
         <svg

@@ -20,19 +20,19 @@ export default function LuxuryPropertyListing({
   properties,
 }: LuxuryPropertyListingProps) {
   return (
-    <div className="w-full h-auto px-44 my-4">
+    <div className="w-full h-auto px-6 sm:px-18 md:px-44 my-4">
       {/* Title + See All */}
-      <div className="flex justify-between items-baseline my-8">
+      <div className="flex justify-between items-baseline my-4 md:my-8">
         <h2 className={`text-4xl font-poppins font-medium ${accentColor}`}>
           {title}
         </h2>
-        <Link className="text-2xl font-normal" href="/">
+        <Link className="text-lg sm:text-2xl font-normal" href="/">
           See All
         </Link>
       </div>
 
       {/* Property Cards */}
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="grid grid-cols-3 justify-center gap-6">
         {properties.map((property, index) => (
           <AboutPropertyCard
             key={index}

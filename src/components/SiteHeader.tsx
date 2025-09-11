@@ -75,17 +75,39 @@ export default function SiteHeader() {
       </nav>
       {/* for Mobile */}
       {menuOpen && (
-        <div className="absolute z-10 top-12 bg-[#5E2D4F] h-[500px] w-[500px] rounded-2xl flex items-center justify-center ">
+        <div className="absolute z-10 top-30  right-12 bg-[#5E2D4F] h-auto auto  lg:hidden rounded-2xl flex flex-col items-center justify-center px-5 py-5">
           <Link href="/">
             <Image
               className=""
               src="/header/MHR-Logo.svg"
               alt="MHR Logo"
-              height={80}
-              width={80}
+              height={50}
+              width={50}
               priority
             />
           </Link>
+          <div className="flex flex-col gap-3">
+            <ul className="font-normal flex flex-col gap-3">
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/properties">Properties</Link>
+              </li>
+              <li>
+                <Link href="/about-us">About Us</Link>
+              </li>
+              <li>
+                <Link href="/for-buyers">For Buyers</Link>
+              </li>
+              <li>
+                <Link href="/">Partners</Link>
+              </li>
+              <li>
+                <Link href="/">Contact Us</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       )}
     </header>
