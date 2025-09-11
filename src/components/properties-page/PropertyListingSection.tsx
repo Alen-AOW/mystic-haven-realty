@@ -1,7 +1,15 @@
+"use client";
+
 import PropertyCard from "@/components/PropertyCard";
 import Image from "next/image";
 import { useState } from "react";
-import CustomMarkerMap from "@/components/CustomMarkerMap";
+
+import dynamic from "next/dynamic";
+
+// Dynamically load Leaflet map only on client
+const CustomMarkerMap = dynamic(() => import("@/components/CustomMarkerMap"), {
+  ssr: false,
+});
 
 export default function PropertyListingSection() {
   const [price, setPrice] = useState(25);

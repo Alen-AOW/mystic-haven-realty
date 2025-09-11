@@ -1,7 +1,15 @@
+"use client";
+
 import LuxuryPropertyListing from "@/components/aboutUs-page/LuxuryPropertyListing";
 import { emaarProperties, sobhaProperties, damakProperties } from "@/data";
 import FilterBar from "@/components/aboutUs-page/FilterBar";
-import CustomMarkerMap from "@/components/CustomMarkerMap";
+
+import dynamic from "next/dynamic";
+
+// Dynamically load Leaflet map only on client
+const CustomMarkerMap = dynamic(() => import("@/components/CustomMarkerMap"), {
+  ssr: false,
+});
 
 export default function About() {
   return (
